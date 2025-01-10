@@ -1,10 +1,17 @@
 import React from 'react'
 import {Link} from "react-router-dom"
+import { BackgroundBeamsDemo } from '../components/elements/BackgroundBeams'
+import { NavbarDemo } from '../components/elements/NavbarMenu'
+
+
+
+
+
 const Home = () => {
   return (
     <>
-    <div>Home</div>
-    <Link to="/info">Info</Link>
+    <BackgroundBeamsDemo/>
+    <NavbarDemo/>
     </>
     
   )
