@@ -1,8 +1,14 @@
 import React from 'react';
 import { Camera, Info as InfoIcon } from 'lucide-react';
 import ImageUploader from '../components/ImageUploader';
+import { useNavigate } from 'react-router-dom';
 
 const Info = () => {
+  const navigate = useNavigate();
+  const goToHome = () => {
+    navigate('/');
+  };
+
   return (
     <div className="min-h-screen bg-black py-8 px-4">
       {/* Header Section */}
@@ -11,15 +17,12 @@ const Info = () => {
           <Camera className="w-8 h-8 text-blue-400" />
           <h1 className="text-3xl font-bold text-gray-100">Image Analysis Portal</h1>
         </div>
-        {/* <div className="bg-gray-900 rounded-lg p-4 shadow-xl border border-gray-800">
-          <div className="flex items-start gap-2 text-left">
-            <InfoIcon className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
-            <p className="text-gray-300">
-              Upload any image and our AI system will analyze it, providing detailed information and relevant Wikipedia references. 
-              Perfect for research, education, or simply learning more about what's in your photos.
-            </p>
-          </div>
-        </div> */}
+      <button  onClick={goToHome} className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+      <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+      <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+      Home Page
+      </span>
+      </button>
       </div>
 
       {/* Main Content */}
